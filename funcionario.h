@@ -19,4 +19,8 @@ class Funcionario {
         string getNome();
         float getSalarioBase(); 
         int getId();
+
+        // Métodos virtuais
+        virtual void exibirInformacoes();
+        virtual float calcularSalarioFinal() = 0;
 };
