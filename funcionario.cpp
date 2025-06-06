@@ -22,6 +22,10 @@ string Funcionario::getNome(){
     return nome;
 }
 
+string Funcionario::getTipo(){
+    return tipo;
+}
+
 float Funcionario::getSalarioBase(){
     return salarioBase;
 }
@@ -30,8 +34,10 @@ int Funcionario::getId(){
     return id;
 }
 
+
+// Método virtual
 void Funcionario::exibirInformacoes(){
-    cout << "ID: " << getId() << endl;
-    cout << "Nome: " << getNome() << endl;
-    cout << "Salário Base: " << getSalarioBase() << endl;
+    cout << "ID: " << id << endl;
+    cout << "Nome: " << nome << endl;
+    cout << "Salário Base: " << salarioBase << endl;
 }

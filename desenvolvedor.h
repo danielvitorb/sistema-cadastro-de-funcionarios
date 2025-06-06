@@ -8,7 +8,10 @@ class Desenvolvedor : public Funcionario{
     public:
         float calcularSalarioFinal();
         void exibirInformacoes();
+
+        // Métodos getters
         int getQuantidadeDeProjetos();
         float getSalarioFinal();
-        string getTipo();
+
+        Desenvolvedor(int id = 0, string nome = "", int projetos = 0, float salario = 0);
 };
