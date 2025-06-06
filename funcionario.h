@@ -4,8 +4,9 @@ using namespace std;
 class Funcionario {
     protected:
         string nome;
+        string tipo;
         float salarioBase;
-    
+        
     private:
         int id;
 

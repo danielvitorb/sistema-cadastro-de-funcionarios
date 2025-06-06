@@ -8,4 +8,7 @@ class Desenvolvedor : public Funcionario{
     public:
         float calcularSalarioFinal();
         void exibirInformacoes();
+        int getQuantidadeDeProjetos();
+        float getSalarioFinal();
+        string getTipo();
 };
