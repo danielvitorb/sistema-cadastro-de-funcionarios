@@ -1,3 +1,5 @@
+#ifndef FUNCIONARIO_H
+#define FUNCIONARIO_H
 #include <string>
 using namespace std;
 
@@ -26,3 +28,5 @@ class Funcionario {
         virtual void exibirInformacoes();
         virtual float calcularSalarioFinal() = 0; // Método virtual puro
 };
+
+#endif
