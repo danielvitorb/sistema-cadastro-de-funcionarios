@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <iomanip>
 #include "funcionario.h"
 using namespace std;
 
@@ -10,11 +9,21 @@ void Funcionario::setNome(string nome){
 }
 
 void Funcionario::setSalarioBase(float salario){
-    salarioBase = salario;
+    if (salario < 0) {
+        cout << "Salário não pode ser negativo." << endl;
+        // Verifica se o salário é negativo
+    } else {
+        salarioBase = salario;
+    }
 }
 
 void Funcionario::setId(int id){
-    this->id = id;
+    if (id < 0) {
+        cout << "ID não pode ser negativo" << endl;
+        // Verifica se o ID é negativo
+    } else {
+        this->id = id;
+    }
 }
 
 // Métodos getters

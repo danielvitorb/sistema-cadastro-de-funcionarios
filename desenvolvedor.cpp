@@ -3,32 +3,44 @@
 
 // Construtor
 Desenvolvedor::Desenvolvedor(int id, string nome, int projetos, float salario){
-    setId(id);
+    setId(id < 0 ? 0 : id);
     this->nome = nome;
-    quantidadeDeProjetos = projetos;
-    salarioBase = salario;
+    setQuantidadeDeProjetos(projetos < 0 ? 0 : projetos);
+    setSalarioBase(salario < 0 ? 0 : salario);
     tipo = "Desenvolvedor";
-    salarioFinal = 0;
+    calcularSalarioFinal();
 }
 
+
+// Implementação de calcularSalarioFinal()
 float Desenvolvedor::calcularSalarioFinal(){
     salarioFinal = salarioBase + (500 * quantidadeDeProjetos);
     return salarioFinal;
 }
 
+
+// Método get
 int Desenvolvedor::getQuantidadeDeProjetos(){
     return quantidadeDeProjetos;
 }
 
-float Desenvolvedor::getSalarioFinal(){
-    return salarioFinal;
+
+// Método set
+void Desenvolvedor::setQuantidadeDeProjetos(int projetos){
+    if (projetos >= 0) {
+        quantidadeDeProjetos = projetos;
+    } else {
+        return; // Não permite quantidade negativa de projetos
+    }
 }
 
+
+// Sobrescrita de exibirInformações()
 void Desenvolvedor::exibirInformacoes(){
     cout << "ID: " << getId() << endl;
     cout << "Nome: " << nome << endl;
     cout << "Tipo: " << tipo << endl;
     cout << "Projetos: " << quantidadeDeProjetos << endl;
     cout << "Salário base: " << salarioBase << endl;
-    cout << "Salário final: " << calcularSalarioFinal() << endl;
+    cout << "Salário final: " << salarioFinal<< endl;
 }
