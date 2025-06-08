@@ -1,6 +1,8 @@
 #include <iostream>
+#include <cmath>
 #include "gerente.h"
 
+// Construtor
 Gerente::Gerente(int id, string nome, float bonus, float salario){
     setId(id < 0 ? 0 : id);
     this->nome = nome;
@@ -13,7 +15,7 @@ Gerente::Gerente(int id, string nome, float bonus, float salario){
 
 // Implementação de calcularSalarioFinal()
 float Gerente::calcularSalarioFinal() {
-    salarioFinal = salarioBase + bonusMensal;
+    salarioFinal = floor((salarioBase + bonusMensal) * 100 / 100); 
     return salarioFinal;
 }
 
@@ -26,6 +28,12 @@ void Gerente::setBonusMensal(float bonus){
     } else {
         bonusMensal = bonus;
     }
+}
+
+
+// Método getter
+float Gerente::getBonusMensal(){
+    return bonusMensal;
 }
 
 

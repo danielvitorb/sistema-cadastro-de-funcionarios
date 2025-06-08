@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 #include "funcionario.h"
 using namespace std;
 
@@ -13,7 +14,7 @@ void Funcionario::setSalarioBase(float salario){
         cout << "Salário não pode ser negativo." << endl;
         // Verifica se o salário é negativo
     } else {
-        salarioBase = salario;
+        salarioBase = floor(salario * 100) / 100;
     }
 }
 

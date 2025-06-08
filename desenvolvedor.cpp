@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include "desenvolvedor.h"
 
 // Construtor
@@ -14,7 +15,7 @@ Desenvolvedor::Desenvolvedor(int id, string nome, int projetos, float salario){
 
 // Implementação de calcularSalarioFinal()
 float Desenvolvedor::calcularSalarioFinal(){
-    salarioFinal = salarioBase + (500 * quantidadeDeProjetos);
+    salarioFinal = floor((salarioBase + (500 * quantidadeDeProjetos)) * 100) / 100;
     return salarioFinal;
 }
 

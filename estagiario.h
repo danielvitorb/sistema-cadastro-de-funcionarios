@@ -7,4 +7,13 @@ class Estagiario : public Funcionario {
     public:
         float calcularSalarioFinal();
         void exibirInformacoes();
+
+        // Método getter
+        int getHorasTrabalhadas();
+
+        // Método setter
+        void setHorasTrabalhadas();
+
+        // Construtor
+        Estagiario(int id, string nome, int horas, float salario);
 };
