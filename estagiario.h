@@ -1,19 +1,20 @@
 #include "funcionario.h"
 
 class Estagiario : public Funcionario {
-    private:
+    private: // Atributos privados
         int horasTrabalhadas;
         float salarioFinal;
-    public:
+
+    public: // Métodos públicos
+        // Construtor
+        Estagiario(int id, string nome, int horas, float salario);
+
         float calcularSalarioFinal();
         void exibirInformacoes();
 
-        // Método getter
+        // Método setter para horasTrabalhadas
+        void setHorasTrabalhadas(int horas);
+
+        // Método getter para horasTrabalhadas
         int getHorasTrabalhadas();
-
-        // Método setter
-        void setHorasTrabalhadas();
-
-        // Construtor
-        Estagiario(int id, string nome, int horas, float salario);
 };

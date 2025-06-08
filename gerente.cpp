@@ -9,31 +9,13 @@ Gerente::Gerente(int id, string nome, float bonus, float salario){
     setBonusMensal(bonus < 0 ? 0 : bonus);
     setSalarioBase(salario < 0 ? 0 : salario);
     tipo = "Gerente";
-    calcularSalarioFinal();
 }
 
 
 // Implementação de calcularSalarioFinal()
 float Gerente::calcularSalarioFinal() {
-    salarioFinal = floor((salarioBase + bonusMensal) * 100 / 100); 
+    salarioFinal = floor((salarioBase + bonusMensal) * 100) / 100; 
     return salarioFinal;
-}
-
-
-// Método setter
-void Gerente::setBonusMensal(float bonus){
-    if (bonus < 0){
-        cout << "Bônus não pode ser negativo" << endl;
-        // Verifica se o bônus é negativo.
-    } else {
-        bonusMensal = bonus;
-    }
-}
-
-
-// Método getter
-float Gerente::getBonusMensal(){
-    return bonusMensal;
 }
 
 
@@ -45,4 +27,21 @@ void Gerente::exibirInformacoes(){
     cout << "Bônus: " << bonusMensal << endl;
     cout << "Salário base: " << salarioBase << endl;
     cout << "Salário final: " << salarioFinal << endl;
+}
+
+
+// Método setter para bonusMensal
+void Gerente::setBonusMensal(float bonus){
+    if (bonus < 0){
+        cout << "Bônus não pode ser negativo" << endl;
+        // Verifica se o bônus é negativo.
+    } else {
+        bonusMensal = bonus;
+    }
+}
+
+
+// Método getter para bonusMensal
+float Gerente::getBonusMensal(){
+    return bonusMensal;
 }

@@ -6,15 +6,15 @@ class Desenvolvedor : public Funcionario{
         float salarioFinal;
 
     public: // Métodos públicos
+        // Construtor
+        Desenvolvedor(int id = 0, string nome = "", int projetos = 0, float salario = 0);
+
         float calcularSalarioFinal();
         void exibirInformacoes();
 
-        // Método getter
-        int getQuantidadeDeProjetos();
-
-        // Método setter
+        // Método setter para quantidade de projetos
         void setQuantidadeDeProjetos(int projetos);
 
-        // Construtor
-        Desenvolvedor(int id = 0, string nome = "", int projetos = 0, float salario = 0);
+        // Método getter para quantidade de projetos
+        int getQuantidadeDeProjetos();
 };

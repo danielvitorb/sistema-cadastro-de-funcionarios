@@ -6,14 +6,15 @@ class Gerente : public Funcionario {
         float salarioFinal;
 
     public: // Métodos públicos
+        // Construtor
+        Gerente(int id = 0, string nome = "", float bonus = 0, float salario = 0);
+
         float calcularSalarioFinal();
         void exibirInformacoes();
 
-        // Método setter
+        // Método setter para bonusMensal
         void setBonusMensal(float bonus);
 
-        // Método getter
+        // Método getter para bonusMensal
         float getBonusMensal();
-
-        Gerente(int id = 0, string nome = "", float bonus = 0, float salario = 0);
 };

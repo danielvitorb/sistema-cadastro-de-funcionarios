@@ -2,16 +2,15 @@
 using namespace std;
 
 class Funcionario {
-    protected: // Atributos protected
+    protected: // Atributos protegidos
         string nome;
         string tipo;
         float salarioBase;
 
-    private: // Atributo private
+    private: // Atributo privado
         int id;
 
     public: // Métodos públicos
-    
         // Métodos setters
         void setNome(string nome);
         void setSalarioBase(float salario);
@@ -25,5 +24,5 @@ class Funcionario {
 
         // Métodos virtuais
         virtual void exibirInformacoes();
-        virtual float calcularSalarioFinal() = 0;
+        virtual float calcularSalarioFinal() = 0; // Método virtual puro
 };

@@ -27,6 +27,7 @@ void Funcionario::setId(int id){
     }
 }
 
+
 // Métodos getters
 string Funcionario::getNome(){
     return nome;

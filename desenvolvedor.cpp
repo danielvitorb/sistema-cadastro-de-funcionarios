@@ -9,7 +9,6 @@ Desenvolvedor::Desenvolvedor(int id, string nome, int projetos, float salario){
     setQuantidadeDeProjetos(projetos < 0 ? 0 : projetos);
     setSalarioBase(salario < 0 ? 0 : salario);
     tipo = "Desenvolvedor";
-    calcularSalarioFinal();
 }
 
 
@@ -20,13 +19,18 @@ float Desenvolvedor::calcularSalarioFinal(){
 }
 
 
-// Método get
-int Desenvolvedor::getQuantidadeDeProjetos(){
-    return quantidadeDeProjetos;
+// Sobrescrita de exibirInformações()
+void Desenvolvedor::exibirInformacoes(){
+    cout << "ID: " << getId() << endl;
+    cout << "Nome: " << nome << endl;
+    cout << "Tipo: " << tipo << endl;
+    cout << "Projetos: " << quantidadeDeProjetos << endl;
+    cout << "Salário base: " << salarioBase << endl;
+    cout << "Salário final: " << calcularSalarioFinal() << endl;
 }
 
 
-// Método set
+// Método setter para quantidadeDeProjetos
 void Desenvolvedor::setQuantidadeDeProjetos(int projetos){
     if (projetos >= 0) {
         quantidadeDeProjetos = projetos;
@@ -36,12 +40,7 @@ void Desenvolvedor::setQuantidadeDeProjetos(int projetos){
 }
 
 
-// Sobrescrita de exibirInformações()
-void Desenvolvedor::exibirInformacoes(){
-    cout << "ID: " << getId() << endl;
-    cout << "Nome: " << nome << endl;
-    cout << "Tipo: " << tipo << endl;
-    cout << "Projetos: " << quantidadeDeProjetos << endl;
-    cout << "Salário base: " << salarioBase << endl;
-    cout << "Salário final: " << salarioFinal<< endl;
+// Método getter para quantidadeDeProjetos
+int Desenvolvedor::getQuantidadeDeProjetos(){
+    return quantidadeDeProjetos;
 }

@@ -1,3 +1,4 @@
+#include <iostream>
 #include "estagiario.h"
 #include <cmath>
 
@@ -8,12 +9,38 @@ Estagiario::Estagiario(int id, string nome, int horas, float salario){
     setHorasTrabalhadas(horas < 0 ? 0 : horas);
     setSalarioBase(salario < 0 ? 0 : salario);
     tipo = "Estagiário";
-    calcularSalarioFinal();
 }
 
 
 // Implementação de calcularSalarioFinal()
 float Estagiario::calcularSalarioFinal(){
-    salarioFinal = salarioBase * (horasTrabalhadas / 160);
+    salarioFinal = floor((salarioBase * (horasTrabalhadas / 160)) * 100) / 100;
     return salarioFinal;
+}
+
+
+// Sobrescrita de exibirInformações()
+void Estagiario::exibirInformacoes(){
+    cout << "ID: " << getId() << endl;
+    cout << "Nome: " << nome << endl;
+    cout << "Tipo: " << tipo << endl;
+    cout << "Horas trabalhadas " << horasTrabalhadas << endl;
+    cout << "Salário base: " << salarioBase << endl;
+    cout << "Salário final: " << salarioFinal<< endl;
+}
+
+
+// Método setter para horasTrabalhadas
+void Estagiario::setHorasTrabalhadas(int horas){
+    if (horas < 0){
+        cout << "Horas trabalhadas não pode ser um valor negativo" << endl;
+    } else {
+        horasTrabalhadas = horas;
+    }
+}
+
+
+// Método getter para horasTrabalhadas
+int Estagiario::getHorasTrabalhadas(){
+    return horasTrabalhadas;
 }
