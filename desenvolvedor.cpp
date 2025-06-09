@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 #include "desenvolvedor.h"
 
 // Construtor
@@ -21,6 +22,7 @@ float Desenvolvedor::calcularSalarioFinal(){
 
 // Sobrescrita de exibirInformações()
 void Desenvolvedor::exibirInformacoes(){
+    cout << fixed << setprecision(2);
     cout << "ID: " << getId() << endl;
     cout << "Nome: " << nome << endl;
     cout << "Tipo: " << tipo << endl;

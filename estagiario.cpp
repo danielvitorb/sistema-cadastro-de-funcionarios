@@ -1,6 +1,8 @@
 #include <iostream>
-#include "estagiario.h"
 #include <cmath>
+#include <iomanip>
+#include "estagiario.h"
+
 
 // Construtor
 Estagiario::Estagiario(int id, string nome, int horas, float salario){
@@ -21,6 +23,7 @@ float Estagiario::calcularSalarioFinal(){
 
 // Sobrescrita de exibirInformações()
 void Estagiario::exibirInformacoes(){
+    cout << fixed << setprecision(2);
     cout << "ID: " << getId() << endl;
     cout << "Nome: " << nome << endl;
     cout << "Tipo: " << tipo << endl;

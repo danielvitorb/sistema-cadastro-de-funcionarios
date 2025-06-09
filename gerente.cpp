@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 #include "gerente.h"
 
 // Construtor
@@ -21,6 +22,7 @@ float Gerente::calcularSalarioFinal() {
 
 // Sobrescrita de exibirInformações()
 void Gerente::exibirInformacoes(){
+    cout << fixed << setprecision(2);
     cout << "ID: " << getId() << endl;
     cout << "Nome: " << nome << endl;
     cout << "Tipo: " << tipo << endl;
