@@ -101,10 +101,5 @@ int main() {
         vetor[j]->exibirInformacoes();
     }
 
-    // Desalocando a memória 
-    for (int j = 0; j < n; j++) {
-        delete vetor[j]; // Libera a memória de cada objeto alocado
-    }
-
     return 0;
 }
