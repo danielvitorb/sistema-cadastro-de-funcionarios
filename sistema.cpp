@@ -95,6 +95,7 @@ int main() {
         }
     }
 
+    // Exibição das informações
     for(int j = 0; j < n; j++){
         cout << endl;
         vetor[j]->exibirInformacoes();
