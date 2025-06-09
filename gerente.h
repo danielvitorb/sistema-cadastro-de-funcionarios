@@ -1,3 +1,5 @@
+#ifndef GERENTE_H
+#define GERENTE_H
 #include "funcionario.h"
 
 class Gerente : public Funcionario {
@@ -18,3 +20,5 @@ class Gerente : public Funcionario {
         // Método getter para bonusMensal
         float getBonusMensal();
 };
+
+#endif

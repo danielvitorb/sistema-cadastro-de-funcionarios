@@ -26,7 +26,7 @@ void Gerente::exibirInformacoes(){
     cout << "Tipo: " << tipo << endl;
     cout << "Bônus: " << bonusMensal << endl;
     cout << "Salário base: " << salarioBase << endl;
-    cout << "Salário final: " << salarioFinal << endl;
+    cout << "Salário final: " << calcularSalarioFinal() << endl;
 }
 
 

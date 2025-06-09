@@ -1,3 +1,5 @@
+#ifndef DESENVOLVEDOR_H
+#define DESENVOLVEDOR_H
 #include "funcionario.h"
 
 class Desenvolvedor : public Funcionario{
@@ -18,3 +20,5 @@ class Desenvolvedor : public Funcionario{
         // Método getter para quantidade de projetos
         int getQuantidadeDeProjetos();
 };
+
+#endif

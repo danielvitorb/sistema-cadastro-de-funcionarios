@@ -14,7 +14,7 @@ Estagiario::Estagiario(int id, string nome, int horas, float salario){
 
 // Implementação de calcularSalarioFinal()
 float Estagiario::calcularSalarioFinal(){
-    salarioFinal = floor((salarioBase * (horasTrabalhadas / 160)) * 100) / 100;
+    salarioFinal = floor((salarioBase * ((float)horasTrabalhadas / 160)) * 100) / 100;
     return salarioFinal;
 }
 
@@ -24,9 +24,9 @@ void Estagiario::exibirInformacoes(){
     cout << "ID: " << getId() << endl;
     cout << "Nome: " << nome << endl;
     cout << "Tipo: " << tipo << endl;
-    cout << "Horas trabalhadas " << horasTrabalhadas << endl;
+    cout << "Horas trabalhadas: " << horasTrabalhadas << endl;
     cout << "Salário base: " << salarioBase << endl;
-    cout << "Salário final: " << salarioFinal<< endl;
+    cout << "Salário final: " << calcularSalarioFinal() << endl;
 }
 
 

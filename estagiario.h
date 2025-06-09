@@ -1,3 +1,5 @@
+#ifndef ESTAGIARIO_H
+#define ESTAGIARIO_H
 #include "funcionario.h"
 
 class Estagiario : public Funcionario {
@@ -7,7 +9,7 @@ class Estagiario : public Funcionario {
 
     public: // Métodos públicos
         // Construtor
-        Estagiario(int id, string nome, int horas, float salario);
+        Estagiario(int id = 0, string nome = "", int horas = 0, float salario = 0);
 
         float calcularSalarioFinal();
         void exibirInformacoes();
@@ -18,3 +20,5 @@ class Estagiario : public Funcionario {
         // Método getter para horasTrabalhadas
         int getHorasTrabalhadas();
 };
+
+#endif
